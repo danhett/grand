@@ -1,9 +1,12 @@
 var story = new inkjs.Story(storyContent);
 var storyContainer = document.querySelectorAll('#story')[0];
-var currentPerson = "Nobody";
 
-story.BindExternalFunction ("get_name", () => {
-    return currentPerson;
+story.BindExternalFunction ("getCurrentLocation", () => {
+    return parent.currentLocation;
+});
+story.BindExternalFunction ("setCurrentLocation", (loc) => {
+    console.log("Setting location to " + loc);
+    parent.currentLocation = loc;
 });
 
 (function(storyContent) {

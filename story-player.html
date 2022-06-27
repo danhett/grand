@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>THE GRAND</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: sans-serif;
+            font-weight: lighter;
+            display: block;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            font-weight: lighter;
+        }
+
+        #welcome {
+            max-width: 900px;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        p {
+            color: gray;
+            line-height: 1.7em;
+            font-size: 13pt;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:link { text-decoration: none; }
+        a:visited { color: red }
+        a { color: red }
+
+        iframe {
+            display: block;
+            background: #000;
+            border: none;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #controlPanel {
+            position:absolute;
+            top:10px;
+            left:10px;
+            display:none;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="controlPanel">
+        <p><button onclick=updateYusuf()>Yusuf. Refugee.</button></p>
+        <p><button onclick=updateRuby()>Ruby. Resident.</button></p>
+        <p><button onclick=updateRaymond()>Raymond. Builder.</button></p>
+    </div>
+
+    <div id="welcome">
+        <h2><b>Who are you?</b></h2>
+        
+        <p><button onclick=launchAsYusuf()>Yusuf. Refugee.</button></p>
+        <p><button onclick=launchAsRuby()>Ruby. Resident.</button></p>
+        <p><button onclick=launchAsRaymond()>Raymond. Builder.</button></p>
+    </div>
+
+    <div id="player"></div>
+</body>
+
+<script>
+    // OUTSIDE_FRONT
+    // OUTSIDE_REAR
+    // ENTRANCE
+    // LOBBY_MAIN
+    // RECEPTION
+    // ELEVATOR
+    // STAIRS
+    // BALLROOM
+    // BAR
+    // CORRIDOR
+    // BEDROOM
+
+    var playerFrame;
+    var currentName = "";
+    var currentLocation = "OUTSIDE_FRONT"; // used by Ink engine
+
+    function launchAsYusuf() {
+        currentName = "yusuf";
+        createInitialWindow();
+    }
+
+    function launchAsRuby() {
+        currentName = "ruby";
+        createInitialWindow();
+    }
+
+    function launchAsRaymond() {
+        currentName = "raymond";
+        createInitialWindow();
+    }
+
+    function createInitialWindow() {
+        removeNav()
+
+        playerFrame = document.createElement("iframe");
+        playerFrame.src = currentName + "/index.html";
+        playerFrame.width = "100%";
+        playerFrame.height = "100%";
+        playerFrame.frameBorder ="0";
+        playerFrame.scrolling = "0";
+        playerFrame.style.border= "none";
+        playerFrame.style.background = "white";
+
+        document.getElementById("player").appendChild(playerFrame);
+    }
+
+    function removeNav() {
+        document.getElementById("welcome").remove();
+        document.getElementById("controlPanel").style.display = "block";
+    }
+
+
+    // UPDATE EXISTING WINDOWS TO NEW VERSIONS
+    function updateYusuf() {
+        currentName = "yusuf";
+        playerFrame.src = currentName + "/index.html";
+    }
+
+    function updateRuby() {
+        currentName = "ruby";
+        playerFrame.src = currentName + "/index.html";
+    }
+
+    function updateRaymond() {
+        currentName = "raymond";
+        playerFrame.src = currentName + "/index.html";
+    }
+
+
+</script>
+</html>
