@@ -13,13 +13,19 @@
             font-weight: lighter;
             display: block;
             max-width: 900px;
-            margin: 0 auto;
+            margin: auto;
             padding: 20px;
-        }
-
-        h1 {
             text-align: center;
             font-weight: lighter;
+        }
+
+        #welcome {
+            max-width: 900px;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         p {
@@ -31,15 +37,19 @@
         a:hover {
             color: black;
         }
+
+        
     </style>
 </head>
 
 <body>
-    <h1>THE GRAND</h1>
-    <p>This is a rough demo prototype of my current MA project, <i>The Grand</i>.</p>
-    <p>This is a work of experimental interactive fiction, designed to allow player/readers to navigate the physical space of The Grand hotel, from several different perspectives. The player/reader can switch viewpoint at any time, inhabiting the same rooms and locations at different chronological points, from different viewpoints, and in different contexts.</p>
-    <p>The Grand changes as much as it's inhabitants do. This project aims to explore this idea.</p>
+    <div id="welcome">
+        <img src="img/logo.png">
+        <p>This is a rough demo prototype of my current MA project, <i>The Grand</i>.</p>
+        <p>This is a work of experimental interactive fiction, designed to allow player/readers to navigate the physical space of The Grand hotel, from several different perspectives. The player/reader can switch viewpoint at any time, inhabiting the same rooms and locations at different chronological points, from different viewpoints, and in different contexts.</p>
+        <p>The Grand changes as much as it's inhabitants do. This project aims to explore this idea.</p>
 
-    <p>Click <a href="grand.html">here</a> to start.</p>
+        <p>Click <a href="grand.html">here</a> to start.</p>
+    </div>
 </body>
 </html>
