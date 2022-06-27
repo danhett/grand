@@ -1,9 +1,12 @@
+var story = new inkjs.Story(storyContent);
+var storyContainer = document.querySelectorAll('#story')[0];
+var currentPerson = "Nobody";
+
+story.BindExternalFunction ("get_name", () => {
+    return currentPerson;
+});
+
 (function(storyContent) {
-
-    var story = new inkjs.Story(storyContent);
-
-    var storyContainer = document.querySelectorAll('#story')[0];
-
     function showAfter(delay, el) {
         setTimeout(function() { el.classList.add("show") }, delay);
     }
@@ -89,3 +92,10 @@
     continueStory();
 
 })(storyContent);
+
+
+
+function setTom() {
+    currentPerson = "Tom";
+    
+}

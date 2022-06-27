@@ -37,3 +37,10 @@ p.choice {
 a:hover {
     color: black;
 }
+
+#sideNav {
+    display:block;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+}
