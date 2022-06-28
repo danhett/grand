@@ -1,27 +1,91 @@
 -> main
 
+//----------------------------
+// External functions
+//----------------------------
 EXTERNAL getCurrentLocation()
-EXTERNAL setCurrentLocation(loc)
-
 === function getCurrentLocation() ===
-~ return "TEST IN BROWSER"
+~ return "outside"
 
+EXTERNAL setCurrentLocation(loc)
 === function setCurrentLocation(location) ===
-~ return "TEST IN BROWSER"
+~ return "outside"
 
+
+//----------------------------
+// Entry point and checks
+//----------------------------
 == main ==
-Ruby's current location is: {getCurrentLocation()}
+{ 
+    - getCurrentLocation() == "outside":    -> outside
+    - getCurrentLocation() == "garden":     -> garden
+    - getCurrentLocation() == "entrance":   -> entrance
+    - getCurrentLocation() == "lobby":      -> lobby
+    - getCurrentLocation() == "desk":       -> desk
+    - getCurrentLocation() == "ballroom":   -> ballroom
+    - getCurrentLocation() == "elevator":   -> elevator
+    - getCurrentLocation() == "corridor":   -> corridor
+    - getCurrentLocation() == "room":       -> room
+    - getCurrentLocation() == "window":     -> window
+    - else: "This location doesn't exist: " + {getCurrentLocation()} -> END
+}
 
- + [Go to the garden] -> garden
- + [Go to the bedroom] -> bedroom
+
+//----------------------------
+// Story sections
+//----------------------------
+== outside == 
+{setCurrentLocation("outside")}
+You are standing outside the hotel. 
++ [Approach the entrance] -> entrance
++ [Walk around the hotel] -> garden
 
 == garden == 
-{setCurrentLocation("GARDEN")}
-Ruby's current location is: {getCurrentLocation()}
--> END
+{setCurrentLocation("garden")}
+You're standing in the hotel gardens. 
++ [Go through the door into the lobby.] -> lobby
++ [Walk to the front of the hotel.] -> outside
 
-== bedroom == 
-{setCurrentLocation("BEDROOM")}
-Ruby's current location is: {getCurrentLocation()}
--> END
+== entrance == 
+{setCurrentLocation("entrance")}
+You're at the entrance to the hotel.
++ [Go inside.] -> lobby
+
+== lobby == 
+{setCurrentLocation("lobby")}
+You're standing in the lobby of the hotel. 
++ [Approach the reception desk.] -> desk
++ [Go into the ballroom.] -> ballroom
++ [Take the elevator up.] -> elevator
+
+== desk == 
+{setCurrentLocation("desk")}
+You stand at the reception desk. There's nobody here.
++ [Leave.] -> lobby
+
+== ballroom == 
+{setCurrentLocation("ballroom")}
+You enter the ballroom of the hotel. There's nothing here yet.
++ [Leave.] -> lobby
+
+== elevator == 
+{setCurrentLocation("elevator")}
+You take the lift up. Ding.
++ [Enter the corridor.] -> corridor
+
+== corridor == 
+{setCurrentLocation("corridor")}
+You walk down the corridor.
++ [Enter your room.] -> room
+
+== room == 
+{setCurrentLocation("room")}
+You enter your room.
++ [Look out of the window.] -> window
+
+== window == 
+{setCurrentLocation("window")}
+You look out of the window.
++ [Stop looking.] -> room
++ [Finish this test.] -> END
 

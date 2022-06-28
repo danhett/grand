@@ -96,9 +96,3 @@ story.BindExternalFunction ("setCurrentLocation", (loc) => {
 
 })(storyContent);
 
-
-
-function setTom() {
-    currentPerson = "Tom";
-    
-}
