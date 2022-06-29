@@ -1,11 +1,11 @@
 # THE GRAND
+
 ## About
 This is an interactive fiction experiment exploring the same space from multiple perspectives, written as part of my ongoing MA study at the Manchester Writing School. 
 
 The Grand is a seaside hotel being used in 2022 as a refugee shelter. This short interactive work allows you to explore the hotel and it's inhabitants from the perspectives of:
-- Raymond (a excited young tourist visiting the new hotel in 1924)
-- Yusuf (an incoming refugee housed in the hotel in 2022)
-- Ruby (a conflicted local resident touring the newly renovated hotel in 2009)
+- Ruby (at a wedding in the hotel as a teenager, 1991)
+- Yusuf (an incoming refugee housed in the hotel, 2022)
 
 At any point you can switch character perspective to re-examine the space through different eyes. Your location in the physical space will stay the same, but your viewpoint and chronological point will change. 
 
