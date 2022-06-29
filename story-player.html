@@ -28,7 +28,7 @@
         }
 
         p {
-            color: gray;
+            color: black;
             line-height: 1.7em;
             font-size: 13pt;
         }
@@ -51,25 +51,43 @@
 
         #controlPanel {
             position:absolute;
-            top:10px;
-            left:10px;
+            top:15px;
+            left:15px;
             display:none;
+            border-color: rgb(205, 174, 98);
+            border-style: dotted;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        #selectionBoxes {
+            display: inline;
+        }
+
+        .shadowBox {
+            box-shadow: 2px 2px 4px #626262;
         }
         
     </style>
 </head>
 
 <body>
+    <!-- This is the floating panel on the top left side. -->
     <div id="controlPanel">
-        <p><button onclick=updateYusuf()>Yusuf. Refugee.</button></p>
-        <p><button onclick=updateRuby()>Ruby. Resident.</button></p>
+        <div id="yusufButton"><h2><a href="javascript:updateYusuf();"><img src="img/yusuf-small.png" width="200"></a></h2></div>
+        <div id="rubyButton"><h2><a href="javascript:updateRuby();"><img src="img/ruby-small.png" width="200"></a></h2></div>
+        <div id="henryButton"><h2><a href="javascript:updateHenry();"><img src="img/henry-small.png" width="200"></a></h2></div>
     </div>
 
+    <!-- Initial question selection. -->
     <div id="welcome">
-        <h2><b>Who are you?</b></h2>
+        <p>Welcome to <i>The Grand</i>. <b>Who are you?</b></p>
         
-        <p><button onclick=launchAsYusuf()>Yusuf. Refugee.</button></p>
-        <p><button onclick=launchAsRuby()>Ruby. Resident.</button></p>
+        <div id="selectionBoxes">
+            <div class="shadowBox"><h2><a href="javascript:launchAsYusuf();"><img src="img/yusuf.png"></a></div></h2>
+            <div class="shadowBox"><h2><a href="javascript:launchAsRuby();"><img src="img/ruby.png"></a></div></h2>
+            <div class="shadowBox"><h2><a href="javascript:launchAsHenry();"><img src="img/henry.png"></a></div></h2>
+        </div>
     </div>
 
     <div id="player"></div>
@@ -83,11 +101,22 @@
     function launchAsYusuf() {
         currentName = "yusuf";
         createInitialWindow();
+
+        selectYusufIcon();
     }
 
     function launchAsRuby() {
         currentName = "ruby";
         createInitialWindow();
+
+        selectRubyIcon();
+    }
+
+    function launchAsHenry() {
+        currentName = "henry";
+        createInitialWindow();
+
+        selectHenryIcon();
     }
 
     function createInitialWindow() {
@@ -115,11 +144,41 @@
     function updateYusuf() {
         currentName = "yusuf";
         playerFrame.src = currentName + "/index.html";
+
+        selectYusufIcon();
     }
 
     function updateRuby() {
         currentName = "ruby";
         playerFrame.src = currentName + "/index.html";
+
+        selectRubyIcon();
+    }
+
+    function updateHenry() {
+        currentName = "henry";
+        playerFrame.src = currentName + "/index.html";
+
+        selectHenryIcon();
+    }
+
+    // ICON HIGHLIGHTING
+    function selectYusufIcon() {
+        document.getElementById("yusufButton").style.opacity = 1;
+        document.getElementById("rubyButton").style.opacity = 0.2;
+        document.getElementById("henryButton").style.opacity = 0.2;
+    }
+
+    function selectRubyIcon() {
+        document.getElementById("yusufButton").style.opacity = 0.2;
+        document.getElementById("rubyButton").style.opacity = 1;
+        document.getElementById("henryButton").style.opacity = 0.2;
+    }
+
+    function selectHenryIcon() {
+        document.getElementById("yusufButton").style.opacity = 0.2;
+        document.getElementById("rubyButton").style.opacity = 0.2;
+        document.getElementById("henryButton").style.opacity = 1;
     }
 
 

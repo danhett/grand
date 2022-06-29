@@ -1,6 +1,5 @@
 body {
-    font-family: sans-serif;
-    font-weight: lighter;
+    font-family: "Cambria, Cochin, Georgia, Times, Times New Roman, serif";
     background-color:#ffe7c7;
 }
 
@@ -16,9 +15,9 @@ h1 {
 }
 
 p, a {
-    color: gray;
+    color: Black;
     line-height: 1.7em;
-    font-size: 13pt;
+    font-size: 16pt;
 }
 
 p {
