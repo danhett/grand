@@ -45,7 +45,7 @@ Henry braces himself against the cold, huddling among the other shivering journa
 
     * [Look around.] ->
     -
-    It's a beautiful spot though, that's for sure. Henry looks back up at the imposing building, the clean white lines and ornate decoration constrasting against the looming clouds behind the hotel. The building towers above everything else on the coast here, visible for miles against the coastal landscape and squat tourist strip buildings that meander down the seafront. No expense has been spared here, clearly, and he wonders if this opulence continues inside, and what kinds of people all of this is really for.
+    It's a beautiful spot though, that's for sure. Henry looks back up at the imposing building, the clean white lines and ornate art deco shapes constrasting against the looming clouds behind the hotel. The building towers above everything else on the coast here, visible for miles against the coastal landscape and squat tourist strip buildings that meander down the seafront. No expense has been spared here, clearly, and he wonders if this opulence continues inside, and what kinds of people all of this is really for.
 
     A breathless young man approaches Henry, clutching several bags. He's casually dressed, wearing a faded woolen sweater and scuffed shoes. A heavy-looking camera hangs from a strap around his neck.  
 
@@ -146,7 +146,12 @@ Jack snorts, and snaps another photo of the lawn. "When's our slot?"
 + [They leave the garden.] -> outside
 
 == garden_second ==
-You're standing in the hotel gardens. 
+There are still a lot of people milling around in the pristine gardens of the Grand, but Jack is nowhere to be found. 
+
+Henry imagines what this place would be like in the summer, filled with well-to-do guests enjoying the place in the sunshine. It's idyllic here, carefully constructed but somehow also unspoiled, a playground for the well-off and a postcard image for the rest of us. 
+
+He glances at his wristwatch. Probably time to head inside and check the rest of the place out. 
+
 + [Walk back to the front of the hotel.] -> outside
 
 

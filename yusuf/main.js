@@ -5,7 +5,7 @@ story.BindExternalFunction ("getCurrentLocation", () => {
     return parent.currentLocation;
 });
 story.BindExternalFunction ("setCurrentLocation", (loc) => {
-    console.log("Setting location to " + loc);
+    //console.log("Setting location to " + loc);
     parent.currentLocation = loc;
 });
 
@@ -36,6 +36,8 @@ story.BindExternalFunction ("setCurrentLocation", (loc) => {
 
         var paragraphIndex = 0;
         var delay = 0.0;
+
+        storyContainer.innerHTML = "";
 
         // Generate story text - loop through available content
         while(story.canContinue) {
