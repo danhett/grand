@@ -12,7 +12,6 @@
         body {
             font-family: sans-serif;
             font-weight: lighter;
-            display: block;
             margin: auto;
             text-align: center;
             background-color:ivory
@@ -47,21 +46,21 @@
             border: none;
             height: 100vh;
             width: 100vw;
+            padding: 0px;
         }
 
         #controlPanel {
-            position:absolute;
-            top:15px;
-            left:15px;
-            display:none;
+            max-width: 500px;
             border-color: rgb(205, 174, 98);
             border-style: dotted;
             border-radius: 10px;
-            padding: 10px;
-        }
 
-        #selectionBoxes {
-            display: inline;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 10px;
+
+            display: none;
+            justify-content: space-between;
         }
 
         .shadowBox {
@@ -74,9 +73,9 @@
 <body>
     <!-- This is the floating panel on the top left side. -->
     <div id="controlPanel">
-        <div id="henryButton"><h2><a href="javascript:updateHenry();"><img src="img/henry-small.png" width="200"></a></h2></div>
-        <div id="rubyButton"><h2><a href="javascript:updateRuby();"><img src="img/ruby-small.png" width="200"></a></h2></div>
-        <div id="yusufButton"><h2><a href="javascript:updateYusuf();"><img src="img/yusuf-small.png" width="200"></a></h2></div>    
+        <div id="henryButton"><h2><a href="javascript:updateHenry();"><img src="img/henry-small.png" width="160"></a></h2></div>
+        <div id="rubyButton"><h2><a href="javascript:updateRuby();"><img src="img/ruby-small.png" width="160"></a></h2></div>
+        <div id="yusufButton"><h2><a href="javascript:updateYusuf();"><img src="img/yusuf-small.png" width="160"></a></h2></div>    
     </div>
 
     <!-- Initial question selection. -->
@@ -126,8 +125,7 @@
         playerFrame.src = currentName + "/index.html";
         playerFrame.width = "100%";
         playerFrame.height = "100%";
-        playerFrame.frameBorder ="0";
-        playerFrame.scrolling = "0";
+        playerFrame.scrolling = "none";
         playerFrame.style.border= "none";
         playerFrame.style.background = "white";
 
@@ -136,7 +134,7 @@
 
     function removeNav() {
         document.getElementById("welcome").remove();
-        document.getElementById("controlPanel").style.display = "block";
+        document.getElementById("controlPanel").style.display = "flex";
     }
 
 

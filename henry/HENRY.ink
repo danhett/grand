@@ -97,7 +97,7 @@ A smartly-dressed concierge stands at the entrance to the Grand. Behind him, a t
 * [Henry pulls out his press ID, and shows it to the concierge.] ->
 -
 
-The man cheerfully waves him away. "Open house today, chaps, don't worry about that. If you'd like to head inside, there are refreshemnts being served in the ballroom, and guides available to show you our facilities."
+The man cheerfully waves him away. "Open house today, chaps, don't worry about that. If you'd like to head inside, there are refreshemnts being served in the ballroom, and guides available to show you our facilities. All of the rooms are open today, so invited press can freely explore our facilities."
 
 Jack thanks the man, and heads inside. Henry makes another note, tips his hat to the man, and takes a last look around the windswept seafront.
 
@@ -164,13 +164,42 @@ He glances at his wristwatch. Probably time to head inside and check the rest of
 { lobby > 1: -> lobby_second }
 
 == lobby_first ==
-You're standing in the lobby of the hotel. 
+Henry emerges into the main lobby of the Grand, unsure what to expect. As he came through the revolving entryway, he'd noticed a few others in front of him stopping in the middle of the room and looking upwards - now, he understood.
+
+The room is cavernous, several floors high, marble and gold delicately lit by a broad and ornate glass canopy at the top of the building. The ground floor is busy but artfully organised, filled with colourful furniture and seating, soft lighting, softly illuminated sculptures and fountains. A white grand piano sits in the centre of one of the three main circles making up the room, played softly by a man in a tuxedo with slicked-back hair. The walls alternate between tall windowpanes looking out onto the bay, framed paintings and elaborate hanging baskets filled with flowers and dangling tendrils of greenery. 
+
+* [Henry exhales.] ->
+-
+He can see now, why he's been sent here. Why people back in the city are talking. Hotels are part of the job for people like Henry, and he's stayed at a few of the higher-end spots in London, but this is... it's an experience already.
+
+Henry has his work cut out. He can see Jack flitting around, clearly also excited, and decides to leave him to his work and check out the rest of this incredible place. At the far end of the lobby is a wide marble reception desk with several people milling around it, next to a spiralling staircase that looks like it leads to the ballroom of the hotel. To the sides are a number of gold-fronted elevators that lead up to the rooms. 
+
+* [A man approaches.] ->
+-
+Like the concierge, he's dressed in pristine formal attire, smiling broadly. He comes to a stop in front of Henry and a few of the other gathered journalists, and bows his head slightly.
+
+"Hello gentlemen, and welcome, welcome! As you can see, our building is open completely today for our invited guests, please feel free to look around. We have staff in all areas who will be delighted to fill you in on the details and specifics of the building and it's facilities."
+
+Henry notes a few thoughts down, smiling - the man's enthusiasm is infectious. A voice behind him pipes up. "Anything we should check out first?"
+
+The smartly-dressed chap nods, with another smile. "Certainly, sir. Behind me at the end of the hall is our reception area, where our general management are located for interview purposes. To the right there is a stairway up to the stunning Grand ballroom, our central point for entertaining at the Grand. 
+
+* ["Can we see the rooms?"] ->
+-
+"You certainly can, sir. We've opened all floors, you're able to move around freely and inspect the Grand at your leisure. Simply take the elevators down my right hand side there, gents, and you can tour our extensive accommodation."
+
+Some of the group disperse in different directions. Henry muses over where to look first.
+
+
 + [Approach the reception desk.] -> desk
 + [Go into the ballroom.] -> ballroom
 + [Take the elevator up.] -> elevator
 
 == lobby_second ==
-You're standing in the lobby of the hotel. 
+Henry returns to the lobby, wondering where to head next. It's still busy here, with dozens of visitors and staff filling the enormous space. The effect of this space, and it's sheer vibrancy and opulence, hasn't worn off after repeated viewings. It's really something.
+
+The smartly-dressed fellow who greeted him before is still smoothly orbiting the lobby, making a beeline for anyone entering the building or looking lost. His smile never drops for a moment.
+
 + [Approach the reception desk.] -> desk
 + [Go into the ballroom.] -> ballroom
 + [Take the elevator up.] -> elevator
