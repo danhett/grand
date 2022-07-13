@@ -89,7 +89,9 @@
         </div>
     </div>
 
-    <div id="player"></div>
+    <div id="player">
+        <iframe id="storyFrame" style="visibility:hidden;background-color:ivory;" onload="this.style.visibility = 'visible';"></iframe>
+    </div>
 </body>
 
 <script>
@@ -121,15 +123,15 @@
     function createInitialWindow() {
         removeNav()
 
-        playerFrame = document.createElement("iframe");
+        playerFrame = document.getElementById("storyFrame");
         playerFrame.src = currentName + "/index.html";
         playerFrame.width = "100%";
         playerFrame.height = "100%";
         //playerFrame.scrolling = "none";
         playerFrame.style.border= "none";
-        playerFrame.style.background = "white";
+        //playerFrame.style.background = "white";
 
-        document.getElementById("player").appendChild(playerFrame);
+        //document.getElementById("player").appendChild(playerFrame);
     }
 
     function removeNav() {
