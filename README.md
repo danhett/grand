@@ -1,5 +1,3 @@
-# THE GRAND
-
 <p align="center">
   <img src="img/logo.png">
 </p>
@@ -7,7 +5,7 @@
 ## About
 This is an interactive fiction experiment exploring the same space from multiple perspectives, written as part of my ongoing MA study at the Manchester Writing School. 
 
-The Grand is a seaside hotel being used in 2022 as a refugee shelter. This short interactive work allows you to explore the hotel and it's inhabitants from the perspectives of:
+The Grand is a fictional art deco seaside hotel. It means many things to many people. This short interactive work allows you to explore the hotel and it's inhabitants from the perspectives of:
 - Henry (a journalist covering the hotel opening, 1937)
 - Ruby (attending a wedding in the hotel as a teenager, 1991)
 - Yusuf (an incoming refugee housed in the hotel, 2022)
