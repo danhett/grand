@@ -1,5 +1,9 @@
 # THE GRAND
 
+<p align="center">
+  <img src="img/logo.png">
+</p>
+
 ## About
 This is an interactive fiction experiment exploring the same space from multiple perspectives, written as part of my ongoing MA study at the Manchester Writing School. 
 
