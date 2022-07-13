@@ -7,7 +7,7 @@ story.BindExternalFunction ("getCurrentLocation", () => {
 story.BindExternalFunction ("setCurrentLocation", (loc) => {
     //console.log("Setting location to " + loc);
     parent.currentLocation = loc;
-    parent.document.body.style.backgroundColor = "#ffe7c7"
+    //parent.document.body.style.backgroundColor = "#ffe7c7"
 });
 
 (function(storyContent) {
