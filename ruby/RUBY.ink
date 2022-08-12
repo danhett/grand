@@ -31,61 +31,199 @@ EXTERNAL setCurrentLocation(loc)
 }
 
 
+
 //----------------------------
-// Story sections
+//          OUTSIDE
 //----------------------------
 == outside == 
 {setCurrentLocation("outside")}
-You are standing outside the hotel. 
-+ [Approach the entrance] -> entrance
-+ [Walk around the hotel] -> garden
+{ outside == 1: -> outside_first }
+{ outside > 1: -> outside_second }
 
-== garden == 
-{setCurrentLocation("garden")}
-You're standing in the hotel gardens. 
-+ [Go through the door into the lobby.] -> lobby
-+ [Walk to the front of the hotel.] -> outside
+== outside_first
+Ruby is outside. 
 
+    + [Enter the hotel.] -> entrance
+    + [Look at the garden.] -> garden
+        
+
+== outside_second ==
+Ruby returns to the outside bit.
+    
+    + [Head into the hotel.] -> entrance
+    + [Explore the perimiter gardens.] -> garden
+
+
+
+//----------------------------
+//          ENTRANCE
+//----------------------------
 == entrance == 
 {setCurrentLocation("entrance")}
-You're at the entrance to the hotel.
-+ [Go inside.] -> lobby
+{ entrance == 1: -> entrance_first }
+{ entrance > 1: -> entrance_second }
 
+== entrance_first
+Ruby is in the entrance.
++ [Go through the revolving door.] -> lobby
++ [Go back outside.] -> outside
+
+== entrance_second
+Ruby is in the entrance.
+
++ [Go through the revolving door.] -> lobby
++ [Go back outside.] -> outside
+
+
+
+//----------------------------
+//          GARDEN
+//----------------------------
+== garden == 
+{setCurrentLocation("garden")}
+{ garden == 1: -> garden_first }
+{ garden > 1: -> garden_second }
+
+== garden_first ==
+Ruby is in the garden.  
++ [Leave the garden.] -> outside
+
+== garden_second ==
+Ruby is in the garden again.
++ [Walk back to the front of the hotel.] -> outside
+
+
+//----------------------------
+//           LOBBY
+//----------------------------
 == lobby == 
 {setCurrentLocation("lobby")}
-You're standing in the lobby of the hotel. 
+{ lobby == 1: -> lobby_first }
+{ lobby > 1: -> lobby_second }
+
+== lobby_first ==
+Ruby is in the lobby.
+
 + [Approach the reception desk.] -> desk
 + [Go into the ballroom.] -> ballroom
 + [Take the elevator up.] -> elevator
 
+== lobby_second ==
+Ruby is in the lobby again.
+
++ [Approach the reception desk.] -> desk
++ [Go into the ballroom.] -> ballroom
++ [Take the elevator up.] -> elevator
+
+
+
+//----------------------------
+//           DESK
+//----------------------------
 == desk == 
 {setCurrentLocation("desk")}
-You stand at the reception desk. There's nobody here.
+{ desk == 1: -> desk_first }
+{ desk > 1: -> desk_second }
+
+== desk_first ==
+Ruby approaches the desk.
+
++ [Return to the lobby.] -> lobby
+
+== desk_second ==
+Ruby approaches the desk again.
+
 + [Leave.] -> lobby
 
+
+
+//----------------------------
+//           BALLROOM
+//----------------------------
 == ballroom == 
 {setCurrentLocation("ballroom")}
-You enter the ballroom of the hotel. There's nothing here yet.
+{ ballroom == 1: -> ballroom_first }
+{ ballroom > 1: -> ballroom_second }
+
+== ballroom_first == 
+PLACEHOLDER. You enter the ballroom of the hotel. There's nothing here yet.
 + [Leave.] -> lobby
 
+== ballroom_second == 
+PLACEHOLDER. You enter the ballroom of the hotel. There's nothing here yet.
++ [Leave.] -> lobby
+
+
+
+//----------------------------
+//           ELEVATOR
+//----------------------------
 == elevator == 
 {setCurrentLocation("elevator")}
-You take the lift up. Ding.
+{ elevator == 1: -> elevator_first }
+{ elevator > 1: -> elevator_second }
+
+== elevator_first ==
+PLACEHOLDER. You take the lift up. Ding.
 + [Enter the corridor.] -> corridor
 
+== elevator_second ==
+PLACEHOLDER. You take the lift up. Ding.
++ [Enter the corridor.] -> corridor
+
+
+
+//----------------------------
+//           CORRIDOR
+//----------------------------
 == corridor == 
 {setCurrentLocation("corridor")}
-You walk down the corridor.
+{ corridor == 1: -> corridor_first }
+{ corridor > 1: -> corridor_second }
+
+== corridor_first ==
+PLACEHOLDER. You walk down the corridor.
 + [Enter your room.] -> room
 
+== corridor_second ==
+PLACEHOLDER. You walk down the corridor.
++ [Enter your room.] -> room
+
+
+
+//----------------------------
+//           ROOM
+//----------------------------
 == room == 
 {setCurrentLocation("room")}
-You enter your room.
+{ room == 1: -> room_first }
+{ room > 1: -> room_second }
+
+== room_first == 
+PLACEHOLDER. You enter your room.
 + [Look out of the window.] -> window
 
+== room_second == 
+PLACEHOLDER. You enter your room.
++ [Look out of the window.] -> window
+
+
+
+//----------------------------
+//           WINDOW
+//----------------------------
 == window == 
 {setCurrentLocation("window")}
-You look out of the window.
+{ window == 1: -> window_first }
+{ window > 1: -> window_second }
+
+== window_first == 
+PLACEHOLDER. You look out of the window.
++ [Stop looking.] -> room
++ [Finish this test.] -> END
+
+== window_second == 
+PLACEHOLDER. You look out of the window.
 + [Stop looking.] -> room
 + [Finish this test.] -> END
 

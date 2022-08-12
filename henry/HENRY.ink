@@ -166,7 +166,7 @@ He glances at his wristwatch. Probably time to head inside and check the rest of
 == lobby_first ==
 Henry emerges into the main lobby of the Grand, unsure what to expect. As he came through the revolving entryway, he'd noticed a few others in front of him stopping in the middle of the room and looking upwards - now, he understood.
 
-The room is cavernous, several floors high, marble and gold delicately lit by a broad and ornate glass canopy at the top of the building. The ground floor is busy but artfully organised, filled with colourful furniture and seating, soft lighting, softly illuminated sculptures and fountains. A white grand piano sits in the centre of one of the three main circles making up the room, played softly by a man in a tuxedo with slicked-back hair. The walls alternate between tall windowpanes looking out onto the bay, framed paintings and elaborate hanging baskets filled with flowers and dangling tendrils of greenery. 
+The room is cavernous, several floors high, marble and gold delicately lit by a broad and ornate glass canopy at the top of the building. The ground floor is busy but artfully organised, filled with colourful furniture and seating, soft lighting, softly illuminated sculptures and fountains. A white grand piano sits in the centre of one of the three main circles making up the room, played softly by a man in a tuxedo with slicked-back hair. The walls alternate between tall windowpanes looking out onto the bay, gold-framed paintings and elaborate hanging baskets filled with white flowers and dangling tendrils of greenery. 
 
 * [Henry exhales.] ->
 -
@@ -215,11 +215,52 @@ The smartly-dressed fellow who greeted him before is still smoothly orbiting the
 { desk > 1: -> desk_second }
 
 == desk_first ==
-You stand at the reception desk. There's nobody here.
-+ [Leave.] -> lobby
+The front desk of the hotel takes up the entire width of the lobby. It's a striking construction, a wide wooden reception desk fronted with brass geometric designs, surrounded by bright geometric panels that spiral up the walls and around the structure of the windows. Behind the desk is a wall of shimmering keys, each hanging neatly underneath an ornate numbered brass circle. To Henry, this opulent layout looks like something from a movie, unreal in it's colourful ostentatiousness. 
+
+* [Henry watches.] ->
+-
+
+A number of hotel staff are gathered here, speaking with journalists who scrawl furiously into jotters. At the centre, a number of photographers and journalists are gathered around one individual, listening keenly. He's as immaculately dressed as everyone else Henry has encountered so far, with an ornately-decorated waistcoat and a shiny badge labelled GENERAL MANAGER. 
+
+There's no way Henry could get close to him. Perhaps it might be worth exploring and coming back later to catch the chap for a quick interview.
+
++ [Return to the lobby.] -> lobby
 
 == desk_second ==
-You stand at the reception desk. There's nobody here.
+Henry approaches the wide, ornate reception desk he milled around at earlier. The crowd has dispersed somewhat, leaving a few hotel staff speaking idly with the remaining journalists. Jack is nearby, taking photo after photo of the decor in the space, the novelty of the opulence clearly not having worn off. 
+
+The manager is nowhere to be seen, but Henry catches the eye of a the receptionist. 
+
+"Hello there, mind if I ask you a few questions?"
+
+She looks momentarily unsure, then composes herself a little and reels off what sounds suspiciously like a script. "I, ah... of course. Welcome to the reception area of the Grand, the heart of the hotel. As you can see this is a unique modernist take on the traditional..."
+
+* [Henry delicately interjects] ->
+-
+"Ah, I read the brochure on the way over, but thankyou."
+
+She stops in her tracks, still smiling.
+
+Henry senses she's relieved, and has probably given that spiel a thousand times today. 
+
+"Can I get a quote from you for the paper?" he asks. 
+
+"We're not really... oh, alright. Ask away."
+
+* [Henry considers for a moment.] ->
+-
+"Can I ask your name? Just for the write-up."
+
+She glances to the others working further down the desk, all equally busy fielding questions. "I'd rather not, if that's alright. 'Receptionist' is fine, if that suits you."
+
+Henry makes a note. "Of course. OK. What do you think of the hotel?"
+
+This one is clearly a prepared answer. She smiles widely and answers confidently. "The Grand is a modern, beautifully-designed space that we couldn't be prouder of, and I hope every guest who stays here has the experience of a lifetime!"
+
+She's beaming, still. Everyone here is very reheased. Henry tips his hat at the young lady, placing his notebook back in a pocket. "Thanks for the quote. Much obliged, miss."
+
+"My pleasure. Do check back if you have any further questions!"
+
 + [Leave.] -> lobby
 
 
@@ -233,11 +274,11 @@ You stand at the reception desk. There's nobody here.
 { ballroom > 1: -> ballroom_second }
 
 == ballroom_first == 
-You enter the ballroom of the hotel. There's nothing here yet.
+PLACEHOLDER. You enter the ballroom of the hotel. There's nothing here yet.
 + [Leave.] -> lobby
 
 == ballroom_second == 
-You enter the ballroom of the hotel. There's nothing here yet.
+PLACEHOLDER. You enter the ballroom of the hotel. There's nothing here yet.
 + [Leave.] -> lobby
 
 
@@ -251,11 +292,11 @@ You enter the ballroom of the hotel. There's nothing here yet.
 { elevator > 1: -> elevator_second }
 
 == elevator_first ==
-You take the lift up. Ding.
+PLACEHOLDER. You take the lift up. Ding.
 + [Enter the corridor.] -> corridor
 
 == elevator_second ==
-You take the lift up. Ding.
+PLACEHOLDER. You take the lift up. Ding.
 + [Enter the corridor.] -> corridor
 
 
@@ -269,11 +310,11 @@ You take the lift up. Ding.
 { corridor > 1: -> corridor_second }
 
 == corridor_first ==
-You walk down the corridor.
+PLACEHOLDER. You walk down the corridor.
 + [Enter your room.] -> room
 
 == corridor_second ==
-You walk down the corridor.
+PLACEHOLDER. You walk down the corridor.
 + [Enter your room.] -> room
 
 
@@ -287,11 +328,11 @@ You walk down the corridor.
 { room > 1: -> room_second }
 
 == room_first == 
-You enter your room.
+PLACEHOLDER. You enter your room.
 + [Look out of the window.] -> window
 
 == room_second == 
-You enter your room.
+PLACEHOLDER. You enter your room.
 + [Look out of the window.] -> window
 
 
@@ -305,12 +346,12 @@ You enter your room.
 { window > 1: -> window_second }
 
 == window_first == 
-You look out of the window.
+PLACEHOLDER. You look out of the window.
 + [Stop looking.] -> room
 + [Finish this test.] -> END
 
 == window_second == 
-You look out of the window.
+PLACEHOLDER. You look out of the window.
 + [Stop looking.] -> room
 + [Finish this test.] -> END
 
